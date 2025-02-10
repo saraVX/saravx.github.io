@@ -1,678 +1,671 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Sarah Ramdani</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sarah Ramdani</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--background);
-  color: var(--text-color);
-  overflow-x: hidden;
-  transition: background 0.5s, color 0.5s;
-  position: relative;
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--text-color);
+            overflow-x: hidden;
+            transition: background 0.5s, color 0.5s;
+            position: relative;
+        }
 
-:root {
-  --background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
-  --text-color: #333;
-  --card-bg: white;
-  --sidebar-bg: rgba(6, 143, 153, 0.9);
-}
+        :root {
+            --background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
+            --text-color: #333;
+            --card-bg: white;
+            --sidebar-bg: rgba(6, 143, 153, 0.9);
+        }
 
-.blue-theme {
-  --background: linear-gradient(45deg, #1e3c72, #2a5298);
-  --text-color: white;
-  --card-bg: #2a5298;
-  --sidebar-bg: rgba(30, 60, 114, 0.9);
-}
+        .blue-theme {
+            --background: linear-gradient(45deg, #1e3c72, #2a5298);
+            --text-color: white;
+            --card-bg: #2a5298;
+            --sidebar-bg: rgba(30, 60, 114, 0.9);
+        }
 
-/* Welcome Section */
-.welcome-section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: var(--background);
-  color: var(--text-color);
-  position: relative;
-  overflow: hidden;
-}
+        /* Welcome section */
+        .welcome-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--background);
+            color: var(--text-color);
+            position: relative;
+            overflow: hidden;
+        }
 
-.welcome-section h1 {
-  font-size: 4rem;
-  margin: 0;
-  font-weight: 600;
-  position: relative;
-}
+        .welcome-section h1 {
+            font-size: 4rem;
+            margin: 0;
+            font-weight: 600;
+            position: relative;
+        }
 
-.welcome-section h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 4px;
-  background: var(--text-color);
-  animation: underline 2s infinite;
-}
+        .welcome-section h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 4px;
+            background: var(--text-color);
+            animation: underline 2s infinite;
+        }
 
-@keyframes underline {
-  0%, 100% { width: 0; }
-  50% { width: 60%; }
-}
+        @keyframes underline {
+            0%, 100% { width: 0; }
+            50% { width: 60%; }
+        }
 
-.welcome-section p {
-  font-size: 1.5rem;
-  margin: 20px 0;
-}
+        .welcome-section p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
 
-.welcome-section .btn {
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: #2575fc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
+        .welcome-section .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #2c61d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
 
-.welcome-section .btn:hover {
-  background: #6a11cb;
-  transform: translateY(-5px);
-}
+        .welcome-section .btn:hover {
+            background: #6a11cb;
+            transform: translateY(-5px);
+        }
 
-.welcome-section .scroll-down {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: var(--text-color);
-  animation: bounce 2s infinite;
-}
+        .welcome-section .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: var(--text-color);
+            animation: bounce 2s infinite;
+        }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-20px); }
-  60% { transform: translateY(-10px); }
-}
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
 
-/* Menu Bar */
-.menu-bar {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  z-index: 1000;
-}
+        /* Menu Bar */
+        .menu-bar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+        }
 
-.menu-btn, .theme-btn {
-  font-size: 20px;
-  background: none;
-  border: none;
-  color: rgb(204, 13, 204);
-  cursor: pointer;
-  padding: 10px;
-}
+        .menu-btn, .theme-btn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: rgb(204, 13, 204);
+            cursor: pointer;
+            padding: 10px;
+        }
 
-.theme-btn {
-  color: #040506;
-}
+        .theme-btn {
+            color: #040506;
+        }
 
-/* Clock */
-.clock {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 20px;
-  color: var(--text-color);
-  z-index: 1000;
-}
+        /* Clock */
+        .clock {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: var(--text-color);
+            z-index: 1000;
+        }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: var(--sidebar-bg);
-  color: white;
-  padding-top: 60px;
-  transition: left 0.5s ease-in-out;
-  z-index: 999;
-}
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: var(--sidebar-bg);
+            color: white;
+            padding-top: 60px;
+            transition: left 0.5s ease-in-out;
+            z-index: 999;
+        }
 
-.sidebar a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  transition: background 0.3s;
-}
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
 
-.sidebar a:hover {
-  background: #4db5ff;
-}
+        .sidebar a:hover {
+            background: #4db5ff;
+        }
 
-/* Container */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-  text-align: center;
-}
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-/* Sections */
-.section {
-  background: var(--card-bg);
-  color: var(--text-color);
-  padding: 60px 20px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
-  transition: background 0.5s, color 0.5s;
-}
+        /* Sections */
+        .section {
+            background: var(--card-bg);
+            color: var(--text-color);
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: background 0.5s, color 0.5s;
+        }
 
-.projects, .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+        .projects, .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.project-card, .skill-card {
-  background: var(--card-bg);
-  color: var(--text-color);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
-}
+        .project-card, .skill-card {
+            background: var(--card-bg);
+            color: var(--text-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+        }
 
-.project-card:hover, .skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
+        .project-card:hover, .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.btn {
-  display: inline-block;
-  padding: 15px 30px;
-  background: #2575fc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #9b119d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
 
-.btn:hover {
-  background: #6a11cb;
-}
+        .btn:hover {
+            background: #6a11cb;
+        }
 
-/* Contact Section */
-.contact-container {
-  background: #fad0c4;
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-}
+        /* Contact Section */
+        .contact-container {
+            background: #fad0c4;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
 
-.contact-links {
-  list-style: none;
-  padding: 0;
-}
+        .contact-links {
+            list-style: none;
+            padding: 0;
+        }
 
-.contact-links li {
-  margin: 10px 0;
-}
+        .contact-links li {
+            margin: 10px 0;
+        }
 
-.contact-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        .contact-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.contact-links img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
+        .contact-links img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
 
-/* AI Buttons */
-.ai-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+        /* AI Buttons */
+        .ai-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-.ai-btn {
-  padding: 10px 20px;
-  background: #2575fc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+        .ai-btn {
+            padding: 10px 20px;
+            background: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-.ai-btn:hover {
-  background: #6a11cb;
-}
+        .ai-btn:hover {
+            background: #6a11cb;
+        }
 
-.ai-btn.active {
-  background: #6a11cb;
-}
+        .ai-btn.active {
+            background: #6a11cb;
+        }
 
-/* AI Content Sections */
-.ai-content {
-  display: none;
-  padding: 20px;
-  background: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
+        /* AI Content Sections */
+        .ai-content {
+            display: none;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
 
-.ai-content.active {
-  display: block;
-}
+        .ai-content.active {
+            display: block;
+        }
 
-/* Canvas for Snow */
-#snowCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+        /* Canvas for Snow */
+        #snowCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
 
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1001;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-.modal-content {
-  background-color: var(--card-bg);
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  color: var(--text-color);
-}
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            color: var(--text-color);
+        }
 
-.close {
-  color: var(--text-color);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
+        .close {
+            color: var(--text-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-.close:hover {
-  color: #4db5ff;
-}
+        .close:hover {
+            color: #4db5ff;
+        }
 
-/* Loading Screen */
-.loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--background);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  transition: opacity 1s;
-}
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 1s;
+        }
 
-.loading-screen.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-.loading-screen .spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
+        .loading-screen .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-</style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-
-<!-- Loading Screen -->
-<div class="loading-screen">
-  <div class="spinner"></div>
-</div>
-
-<!-- Welcome Section -->
-<section class="welcome-section">
-  <h1 class="animate__animated animate__fadeInDown">Sarah Ramdani</h1>
-  <p class="animate__animated animate__fadeInUp">Développeuse Passionnée | Étudiante en BTS SIO SLAM</p>
-  <a href="#about" class="btn animate__animated animate__fadeIn">Découvrir mon Portfolio</a>
-  <div class="scroll-down animate__animated animate__fadeIn">
-    <i class="fas fa-chevron-down"></i>
-  </div>
-</section>
-
-<!-- Menu Bar -->
-<div class="menu-bar">
-  <button class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
-  <button class="theme-btn" onclick="toggleTheme()"><i class="fas fa-adjust"></i> Changer de thème</button>
-</div>
-
-<!-- Clock -->
-<div class="clock" id="clock"></div>
-
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-  <a href="#about" onclick="toggleMenu()">👤 À propos</a>
-  <a href="#projects" onclick="toggleMenu()">💻 Projets</a>
-  <a href="#certifications" onclick="toggleMenu()">📜 Certifications</a>
-  <a href="#competences" onclick="toggleMenu()">🛠️ Compétences</a>
-  <a href="#contact" onclick="toggleMenu()">📧 Contact</a>
-</div>
-
-<!-- Container -->
-<div class="container">
-
-  <!-- About Section -->
-  <div class="section animate__animated animate__fadeIn" id="about">
-    <h1>À Propos 🚀</h1>
-    <p>
-        Je m'appelle Sarah Ramdani, étudiante en BTS SIO, option SLAM à l’IN’STA Paris. Passionnée par le développement logiciel, j’ai choisi cette spécialisation pour approfondir mes compétences en programmation, conception d’applications et bases de données. J’aime apprendre de nouvelles technologies et relever des défis techniques, ce qui me permet d’être autonome et rigoureuse dans mon travail.</p></div>
-
-  <!-- Projects Section -->
-  <div class="section animate__animated animate__fadeIn" id="projects">
-    <h2>Projets réalisés en première année🛠️</h2>
-    <div class="projects">
-      <div class="project-card" onclick="openModal('ecommerce')">🛒 Projet e-commerce</div>
-      <div class="project-card" onclick="openModal('abs')">📊 Projet ABS</div>
-    </div>
-    <h2>Projets réalisés en deuxième année🛠️</h2>
-    <div class="projects">
-      <div class="project-card" onclick="openModal('gestion-taches')">📝 Projet Gestion des Tâches</div>
-      <div class="project-card" onclick="openModal('reservation')">📅 Plateforme de Réservation</div>
-    </div>
-  </div>
-
-  <!-- Certifications Section -->
-  <div class="section animate__animated animate__fadeIn" id="certifications">
-    <h2>Certifications 📜</h2>
-    <p>Ma formation en développement web en ligne m'a permis d'apprendre les bases du front-end et du back-end, en maîtrisant des langages comme HTML, CSS, JavaScript et PHP. J'ai acquis des compétences en création de sites dynamiques, gestion de bases de données et optimisation des performances.</p>
-    <a href="#" class="btn">Télécharger les certifications</a>
-  </div>
-
-  <!-- Skills Section -->
-  <div class="section animate__animated animate__fadeIn" id="competences">
-    <h2>Compétences</h2>
-    <div class="skills">
-      <div class="skill-card"><i class="fas fa-code"></i>C</div>
-      <div class="skill-card"><i class="fab fa-python"></i>Python</div>
-      <div class="skill-card"><i class="fab fa-php"></i>PHP</div>
-      <div class="skill-card"><i class="fab fa-html5"></i>HTML</div>
-      <div class="skill-card"><i class="fab fa-js"></i>JavaScript</div>
-      <div class="skill-card"><i class="fab fa-linux"></i>Linux</div>
-      <div class="skill-card"><i class="fab fa-css3"></i>CSS</div>
-    </div>
-  </div>
-
-  <!-- Software Section -->
-  <div class="section animate__animated animate__fadeIn" id="logiciels">
-    <h2>Logiciels ⚙️</h2>
-    <div class="skills">
-      <div class="skill-card">💻 Visual Studio</div>
-      <div class="skill-card">🐙 GitHub</div>
-      <div class="skill-card">🎬 After Effects</div>
-      <div class="skill-card">📊 Tableau</div>
-      <div class="skill-card">🐳 Docker</div>
-      <div class="skill-card">☸️ Kubernetes</div>
-      <div class="skill-card">🛠️ Jenkins</div>
-    </div>
-  </div>
-
-  <!-- Veille Technologique Section -->
-  <div class="section animate__animated animate__fadeIn" id="veille-ai">
-    <h2>Veille Technologique 🚀 : Intelligence Artificielle 🤖💻</h2>
-    <!-- Buttons for AI Topics -->
-    <div class="ai-buttons">
-      <button class="ai-btn active" onclick="showAIContent('history')">Histoire de l'IA</button>
-      <button class="ai-btn" onclick="showAIContent('definition')">Définition de l'IA</button>
-      <button class="ai-btn" onclick="showAIContent('examples')">Exemples</button>
-      <button class="ai-btn" onclick="showAIContent('advantages')">Avantages</button>
-      <button class="ai-btn" onclick="showAIContent('disadvantages')">Inconvénients</button>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
     </div>
 
-    <!-- AI Content Sections -->
-    <div id="ai-history" class="ai-content active">
-      <p><strong>Histoire de l'IA :</strong> L'intelligence artificielle (IA) a émergé dans les années 1950 avec les travaux d'Alan Turing, qui proposa le célèbre "test de Turing" pour évaluer la capacité d'une machine à imiter l'intelligence humaine. Depuis, l'IA a connu plusieurs avancées majeures, passant de simples programmes à des systèmes capables d'apprendre et de s'adapter grâce à l'apprentissage automatique. Aujourd'hui, l'IA est omniprésente, utilisée dans des domaines variés comme la médecine, la finance et les transports, transformant notre quotidien.</p>
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1 class="animate__animated animate__fadeInDown">Sarah Ramdani</h1>
+        <p class="animate__animated animate__fadeInUp">Développeuse Passionnée | Étudiante en BTS SIO SLAM</p>
+        <a href="#about" class="btn animate__animated animate__fadeIn">Découvrir mon Portfolio</a>
+        <div class="scroll-down animate__animated animate__fadeIn">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <button class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      
+        <button class="theme-btn" onclick="toggleTheme()"><i class="fas fa-adjust"></i> Changer de thème</button>
     </div>
 
-    <div id="ai-definition" class="ai-content">
-      <p><strong>Définition de l'IA :</strong> L'intelligence artificielle (IA) désigne la capacité d'une machine ou d'un système informatique à accomplir des tâches qui nécessitent normalement l'intelligence humaine, telles que la compréhension du langage, la reconnaissance d'images, la prise de décisions ou l'apprentissage. Elle repose sur des algorithmes et des modèles qui permettent aux machines de simuler des processus cognitifs et d'améliorer leurs performances au fil du temps.</p>
+    <!-- Clock -->
+    <div class="clock" id="clock"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#about" onclick="toggleMenu()">👤 À propos</a>
+        <a href="#projects" onclick="toggleMenu()">🖥️ Projets</a>
+        <a href="#certifications" onclick="toggleMenu()">📜 Certifications</a>
+        <a href="#competences" onclick="toggleMenu()">🛠️ Compétences</a>
+        <a href="#contact" onclick="toggleMenu()">📧 Contact</a>
     </div>
 
-    <div id="ai-examples" class="ai-content">
-      <p><strong>Exemple :</strong> L'algorithme de TikTok utilise l'IA pour recommander des vidéos basées sur les interactions de l'utilisateur, comme les likes et les partages. Il analyse le comportement de l'utilisateur pour personnaliser le fil d'actualités, en suggérant des contenus similaires à ceux qui ont suscité de l'engagement, rendant l'expérience plus captivante et adaptée.</p>
-      <p><strong>L'IA en Médecine :</strong> L'intelligence artificielle en médecine permet de diagnostiquer plus rapidement des maladies, comme les cancers, en analysant des images médicales. Elle aide également à personnaliser les traitements et à optimiser la gestion des données, améliorant ainsi l'efficacité et la précision des soins.</p>
+    <!-- Container -->
+    <div class="container">
+        <!-- About Section -->
+        <div class="section animate__animated animate__fadeIn" id="about">
+            <h1>À Propos 🚀</h1>
+            <p>Je m’appelle Sarah Ramdani, étudiante en BTS SIO option SLAM. Passionnée par le développement, j’aime concevoir des applications web et logicielles en explorant les nouvelles technologies
+                 
+            </p>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section animate__animated animate__fadeIn" id="projects">
+            <h2>Projets réalisés en première année🛠️</h2>
+            <div class="projects">
+                <div class="project-card" onclick="openModal('tetris')">🎮 Jeu Tetris</div>
+                <div class="project-card" onclick="openModal('flying-bird')">🐦 Flappy Bird</div>
+                
+            </div>
+            <h2>Projets réalisés en deuxième année🛠️</h2>
+            <div class="projects">
+                <div class="project-card" onclick="openModal('gestion-taches')">📝 Projet Gestion des Tâches</div>
+                <div class="project-card" onclick="openModal('alternance')">💼 Alternance en Développement</div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section animate__animated animate__fadeIn" id="certifications">
+            <h2>Certifications 📜</h2>
+            <p>
+                Ma formation en développement web en ligne m'a permis d'apprendre les bases du front-end et du back-end, en maîtrisant des langages comme HTML, CSS, JavaScript et PHP. J'ai acquis des compétences en création de sites dynamiques, gestion de bases de données et optimisation des performances.
+            </p>
+            <a href=" https://github.com/saraVX/saravx.github.io/blob/main/certificate%20udemy.pdf" download="ma-certification.pdf" class="btn">Voir la certification</a>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section animate__animated animate__fadeIn" id="competences">
+            <h2>Compétences</h2>
+            <div class="skills">
+                <div class="skill-card"><i class="fas fa-code"></i>C</div>
+                <div class="skill-card"><i class="fab fa-python"></i>Python</div>
+                <div class="skill-card"><i class="fab fa-php"></i>PHP</div>
+                <div class="skill-card"><i class="fab fa-html5"></i>HTML</div>
+                <div class="skill-card"><i class="fab fa-js"></i>JavaScript</div>
+                <div class="skill-card"><i class="fab fa-linux"></i>Linux</div>
+                <div class="skill-card"><i class="fab fa-css3"></i>CSS</div>
+            </div>
+        </div>
+
+        <!-- Software Section -->
+        <div class="section animate__animated animate__fadeIn" id="logiciels">
+            <h2>Logiciels ⚙️</h2>
+            <div class="skills">
+                <div class="skill-card">🖥️ Visual Studio</div>
+                <div class="skill-card">🐙 GitHub</div>
+                <div class="skill-card">📊 Tableau</div>
+                <div class="skill-card">🐘 PHPMyAdmin</div>
+                <div class="skill-card">🗄️ MariaDB</div>
+                <div class="skill-card">🖥️ Windows</div>
+            </div>
+        </div>
+
+        <!-- Veille Technologique Section -->
+        <div class="section animate__animated animate__fadeIn" id="veille-ai">
+            <h2>La Veille Technologique 🚀 : L'Intelligence Artificielle 🤖🖥️</h2>
+            <!-- Buttons for AI Topics -->
+            <div class="ai-buttons">
+                <button class="ai-btn active" onclick="showAIContent('history')">Histoire de l'IA</button>
+                <button class="ai-btn" onclick="showAIContent('definition')">Définition de l'IA</button>
+                <button class="ai-btn" onclick="showAIContent('examples')">Exemples</button>
+                <button class="ai-btn" onclick="showAIContent('advantages')">Avantages</button>
+                <button class="ai-btn" onclick="showAIContent('disadvantages')">Inconvénients</button>
+            </div>
+
+            <!-- AI Content Sections -->
+            <div id="ai-history" class="ai-content active">
+                <p><strong>L'Histoire de l'IA :</strong> L'intelligence artificielle (IA) a émergé dans les années 1950 avec les travaux d'Alan Turing, qui proposa le célèbre "test de Turing" pour évaluer la capacité d'une machine à imiter l'intelligence humaine. Depuis, l'IA a connu plusieurs avancées majeures, passant de simples programmes à des systèmes capables d'apprendre et de s'adapter grâce à l'apprentissage automatique. Aujourd'hui, l'IA est omniprésente, utilisée dans des domaines variés comme la médecine, la finance et les transports, transformant notre quotidien.</p>
+            </div>
+
+            <div id="ai-definition" class="ai-content">
+                <p><strong>La Définition de l'IA :</strong> L'intelligence artificielle (IA) désigne la capacité d'une machine ou d'un système informatique à accomplir des tâches qui nécessitent normalement l'intelligence humaine, telles que la compréhension du langage, la reconnaissance d'images, la prise de décisions ou l'apprentissage. Elle repose sur des algorithmes et des modèles qui permettent aux machines de simuler des processus cognitifs et d'améliorer leurs performances au fil du temps.</p>
+            </div>
+
+            <div id="ai-examples" class="ai-content">
+                <p><strong>Exemple :</strong> L'algorithme de TikTok utilise l'IA pour recommander des vidéos basées sur les interactions de l'utilisateur, comme les likes et les partages. Il analyse le comportement de l'utilisateur pour personnaliser le fil d'actualités, en suggérant des contenus similaires à ceux qui ont suscité de l'engagement, rendant l'expérience plus captivante et adaptée.</p>
+                <p><strong>L'IA en Médecine :</strong> L'intelligence artificielle en médecine permet de diagnostiquer plus rapidement des maladies, comme les cancers, en analysant des images médicales. Elle aide également à personnaliser les traitements et à optimiser la gestion des données, améliorant ainsi l'efficacité et la précision des soins.</p>
+            </div>
+
+            <div id="ai-advantages" class="ai-content">
+                <p><strong>Les Avantages :</strong>L’IA automatise les tâches, améliore la productivité et réduit les erreurs. Elle optimise la prise de décision, facilite les diagnostics médicaux et renforce la cybersécurité. Grâce à elle, les entreprises innovent et les technologies deviennent plus intelligentes. </p>
+            </div>
+
+            <div id="ai-disadvantages" class="ai-content">
+                <p><strong>Les Inconvénients :</strong> Malgré ses avantages, l'intelligence artificielle présente certains inconvénients. L'un des principaux risques est la perte d'emplois due à l'automatisation de tâches répétitives. De plus, l'IA peut renforcer les biais si les algorithmes sont formés sur des données partielles ou biaisées. Il existe également des préoccupations concernant la vie privée et la sécurité des données, car les systèmes d'IA traitent souvent de grandes quantités d'informations personnelles. Enfin, l'IA peut entraîner une dépendance technologique, rendant les utilisateurs moins autonomes.</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section animate__animated animate__fadeIn" id="contact">
+            <h2>Contact 📧</h2>
+            <ul class="contact-links">
+                <li><a href="mailto:saycram@gmail.com">📧 Email</a></li>
+            </ul>
+        </div>
     </div>
 
-    <div id="ai-advantages" class="ai-content">
-      <p><strong>Avantages :</strong> L'intelligence artificielle (IA) désigne la capacité d'une machine ou d'un système informatique à accomplir des tâches qui nécessitent normalement l'intelligence humaine, telles que la compréhension du langage, la reconnaissance d'images, la prise de décisions ou l'apprentissage. Elle repose sur des algorithmes et des modèles qui permettent aux machines de simuler des processus cognitifs et d'améliorer leurs performances au fil du temps.</p>
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
     </div>
 
-    <div id="ai-disadvantages" class="ai-content">
-      <p><strong>Inconvénients :</strong> Malgré ses avantages, l'intelligence artificielle présente certains inconvénients. L'un des principaux risques est la perte d'emplois due à l'automatisation de tâches répétitives. De plus, l'IA peut renforcer les biais si les algorithmes sont formés sur des données partielles ou biaisées. Il existe également des préoccupations concernant la vie privée et la sécurité des données, car les systèmes d'IA traitent souvent de grandes quantités d'informations personnelles. Enfin, l'IA peut entraîner une dépendance technologique, rendant les utilisateurs moins autonomes.</p>
-    </div>
-  </div>
+    <!-- Snow Canvas -->
+    <canvas id="snowCanvas"></canvas>
 
-  <!-- Contact Section -->
-  <div class="section animate__animated animate__fadeIn" id="contact">
-    <h2>Contact 📧</h2>
-    <ul class="contact-links">
-      <li><a href="mailto:saycram@gmail.com">📧 Email</a></li>
-      <li><a href="https://www.instagram.com/saycram" target="_blank">📸 Instagram</a></li>
-      <p>📞 Contactez-moi au : <a href="tel:0780810747">0780810747</a></p>
-    </ul>
-  </div>
-</div>
+    <script>
+        const canvas = document.getElementById('snowCanvas');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
 
-<!-- Modal -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <p id="modalDescription"></p>
-  </div>
-</div>
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
 
-<!-- Snow Canvas -->
-<canvas id="snowCanvas"></canvas>
+        function createSnowflake() {
+            let x = Math.random() * canvas.width;
+            let y = Math.random() * canvas.height;
+            let size = Math.random() * 4 + 1;
+            let speed = Math.random() * 2 + 1;
+            snowflakes.push({x, y, size, speed});
+        }
 
-<script>
-// Fonction pour la neige
-const canvas = document.getElementById('snowCanvas');
-const ctx = canvas.getContext('2d');
-let snowflakes = [];
+        function updateSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < snowflakes.length; i++) {
+                let flake = snowflakes[i];
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                flake.y += flake.speed;
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
+                if (flake.y > canvas.height) {
+                    flake.y = 0;
+                }
+            }
+        }
 
-function createSnowflake() {
-  let x = Math.random() * canvas.width;
-  let y = Math.random() * canvas.height;
-  let size = Math.random() * 4 + 1;
-  let speed = Math.random() * 2 + 1;
-  snowflakes.push({x, y, size, speed});
-}
+        function animate() {
+            updateSnowflakes();
+            requestAnimationFrame(animate);
+        }
 
-function updateSnowflakes() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let i = 0; i < snowflakes.length; i++) {
-    let flake = snowflakes[i];
-    ctx.beginPath();
-    ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-    ctx.fillStyle = 'white';
-    ctx.fill();
-    flake.y += flake.speed;
+        resizeCanvas();
+        for (let i = 0; i < 200; i++) {
+            createSnowflake();
+        }
 
-    // Si un flocon sort de l'écran, le replacer en haut
-    if (flake.y > canvas.height) {
-      flake.y = 0;
-    }
-  }
-}
+        window.addEventListener('resize', resizeCanvas);
+        animate();
 
-function animate() {
-  updateSnowflakes();
-  requestAnimationFrame(animate);
-}
+        function toggleMenu() {
+            let sidebar = document.getElementById('sidebar');
+            sidebar.style.left = sidebar.style.left === '-250px' ? '0' : '-250px';
+        }
 
-// Initialisation de la neige
-resizeCanvas();
-for (let i = 0; i < 200; i++) {
-  createSnowflake();
-}
+        function toggleTheme() {
+            document.body.classList.toggle('blue-theme');
+            localStorage.setItem('theme', document.body.classList.contains('blue-theme') ? 'blue' : 'default');
+        }
 
-window.addEventListener('resize', resizeCanvas);
-animate();
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'blue') {
+            document.body.classList.add('blue-theme');
+        }
 
-// Fonction du menu
-function toggleMenu() {
-  let sidebar = document.getElementById('sidebar');
-  sidebar.style.left = sidebar.style.left === '-250px' ? '0' : '-250px';
-}
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-// Fonction de changement de thème
-function toggleTheme() {
-  document.body.classList.toggle('blue-theme');
-  localStorage.setItem('theme', document.body.classList.contains('blue-theme') ? 'blue' : 'default');
-}
+        function openModal(project) {
+            const modal = document.getElementById('projectModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
 
-// Charger le thème sauvegardé
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'blue') {
-  document.body.classList.add('blue-theme');
-}
+            switch (project) {
+                case 'tetris':
+                    modalTitle.textContent = 'Jeu Tetris';
+                    modalDescription.textContent = 'J’ai développé un jeu Tetris en utilisant JavaScript et HTML5 Canvas. Ce projet m’a permis de comprendre les concepts de base de la programmation de jeux, comme la gestion des collisions, la génération aléatoire de pièces, et la gestion des scores. J’ai également implémenté des fonctionnalités comme la pause, le redémarrage, et des niveaux de difficulté progressifs.';
+                    break;
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+                case 'flying-bird':
+                    modalTitle.textContent = 'Flying Bird';
+                    modalDescription.textContent = 'J’ai créé un jeu inspiré de "Flappy Bird" en utilisant JavaScript et HTML5 Canvas. Ce projet m’a permis de travailler sur la gestion des événements utilisateur, la physique simple (gravité et vitesse), et la génération aléatoire des obstacles. J’ai également ajouté un système de score et des effets sonores pour améliorer l’expérience utilisateur.';
+                    break;
 
-// Modal functions
-function openModal(project) {
-  const modal = document.getElementById('projectModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDescription = document.getElementById('modalDescription');
+                case 'gestion-taches':
+                    modalTitle.textContent = 'Projet Gestion des Tâches';
+                    modalDescription.textContent = 'Création d\'une application de gestion des tâches avec des fonctionnalités de priorisation, de délais, et de collaboration en équipe. Technologies utilisées : React, Node.js, MongoDB.';
+                    break;
 
-  switch (project) {
-    case 'ecommerce':
-      modalTitle.textContent = 'Projet e-commerce';
-      modalDescription.textContent = 'Développement d\'une plateforme e-commerce complète avec gestion des produits, panier d\'achat, et système de paiement sécurisé. Technologies utilisées : HTML, CSS, JavaScript, PHP, MySQL.';
-      break;
-    case 'abs':
-      modalTitle.textContent = 'Projet ABS';
-      modalDescription.textContent = 'Conception et implémentation d\'un système de gestion des absences pour une école. Fonctionnalités : suivi des absences, génération de rapports, notifications. Technologies utilisées : Python, Django, PostgreSQL.';
-      break;
-    case 'gestion-taches':
-      modalTitle.textContent = 'Projet Gestion des Tâches';
-      modalDescription.textContent = 'Création d\'une application de gestion des tâches avec des fonctionnalités de priorisation, de délais, et de collaboration en équipe. Technologies utilisées : React, Node.js, MongoDB.';
-      break;
-    case 'reservation':
-      modalTitle.textContent = 'Plateforme de Réservation';
-      modalDescription.textContent = 'Développement d\'une plateforme de réservation en ligne pour des événements. Fonctionnalités : réservation en temps réel, gestion des places, paiement en ligne. Technologies utilisées : Vue.js, Laravel, MySQL.';
-      break;
-  }
+                
 
-  modal.style.display = 'block';
-}
+                case 'alternance':
+                    modalTitle.textContent = 'Alternance en Développement';
+                    modalDescription.textContent = 'J’ai effectué une alternance en développement chez CAPGEMINI, où j’ai travaillé sur des projets concrets en utilisant des technologies modernes comme React, Node.js et MongoDB. Cette expérience m’a permis de développer mes compétences en développement web et de comprendre les enjeux du monde professionnel.';
+                    break;
 
-function closeModal() {
-  const modal = document.getElementById('projectModal');
-  modal.style.display = 'none';
-}
+            }
 
-// Loading screen
-window.addEventListener('load', () => {
-  const loadingScreen = document.querySelector('.loading-screen');
-  loadingScreen.classList.add('hidden');
-});
+            modal.style.display = 'block';
+        }
 
-// AI Content Toggle
-function showAIContent(section) {
-  // Hide all AI content sections
-  document.querySelectorAll('.ai-content').forEach(content => {
-    content.style.display = 'none';
-  });
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.style.display = 'none';
+        }
 
-  // Remove active class from all buttons
-  document.querySelectorAll('.ai-btn').forEach(button => {
-    button.classList.remove('active');
-  });
+        window.addEventListener('load', () => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.classList.add('hidden');
+        });
 
-  // Show the selected section and mark the button as active
-  document.getElementById(`ai-${section}`).style.display = 'block';
-  document.querySelector(`.ai-btn[onclick="showAIContent('${section}')"]`).classList.add('active');
-}
+        function showAIContent(section) {
+            document.querySelectorAll('.ai-content').forEach(content => {
+                content.style.display = 'none';
+            });
 
-// Clock
-function updateClock() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
-  const clock = document.getElementById('clock');
-  clock.textContent = `${hours}:${minutes}:${seconds}`;
-}
+            document.querySelectorAll('.ai-btn').forEach(button => {
+                button.classList.remove('active');
+            });
 
-setInterval(updateClock, 1000);
-updateClock();
-</script>
+            document.getElementById(`ai-${section}`).style.display = 'block';
+            document.querySelector(`.ai-btn[onclick="showAIContent('${section}')"]`).classList.add('active');
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const clock = document.getElementById('clock');
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
 </html>

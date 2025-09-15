@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -497,6 +497,14 @@
             color: white;
         }
 
+        .btn-green {
+            background: #28a745;
+        }
+
+        .btn-green:hover {
+            background: #218838;
+        }
+
         /* Scroll down indicator */
         .scroll-down {
             position: absolute;
@@ -643,6 +651,13 @@
 
         .close:hover {
             color: var(--primary);
+        }
+
+        .modal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
         /* Loading screen */
@@ -1440,27 +1455,42 @@
             const modal = document.getElementById('modal');
             const modalContent = document.getElementById('modal-content');
             
-            // In a real implementation, you would fetch content based on the contentId
             let content = '';
             if (contentId === 'project-quiz') {
                 content = `
                     <h2>Site de quiz interactif</h2>
-                    <p>Détails du projet : Création d'une application web full-stack avec HTML/CSS/JS + PHP/MySQL. Interface responsive, système d'authentification et gestion CRUD. Focus sur UX et sécurisation des données.</p>
+                    <img src="https://images.unsplash.com/photo-1518770660439-0e3dd25b03cf?auto=format&fit=crop&w=800&q=80" alt="Quiz project" class="modal-img">
+                    <p>Ce projet innovant vise à créer une plateforme engageante où les utilisateurs peuvent tester leurs connaissances à travers des quiz dynamiques. Développé avec une stack full-stack incluant HTML, CSS et JavaScript pour l'interface utilisateur responsive, et PHP/MySQL pour le back-end, il intègre un système d'authentification sécurisé et des fonctionnalités CRUD pour gérer les contenus. L'accent a été mis sur une expérience utilisateur fluide et une sécurisation optimale des données, rendant l'application accessible sur tous les appareils.</p>
+                    <a href="https://github.com/saraVX/quiz-project" target="_blank" class="btn btn-green">
+                        <i class="fas fa-external-link-alt"></i> Voir le projet
+                    </a>
                 `;
             } else if (contentId === 'project-oggi') {
                 content = `
                     <h2>Stage chez OGGI</h2>
-                    <p>Détails du stage : Réalisation d'un petit site vitrine complet en HTML, CSS, JavaScript avec back-end PHP/MySQL et interface responsive.</p>
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" alt="OGGI project" class="modal-img">
+                    <p>Lors de ce stage enrichissant chez OGGI, j'ai eu l'opportunité de concevoir et implémenter un site vitrine complet. Utilisant HTML, CSS et JavaScript pour une interface responsive et attrayante, complétée par un back-end en PHP/MySQL, ce projet a permis de mettre en valeur les produits de l'entreprise de manière professionnelle. Cette expérience a renforcé mes compétences en développement web réel et en collaboration au sein d'une équipe dynamique.</p>
+                    <a href="https://github.com/saraVX/oggi-project" target="_blank" class="btn btn-green">
+                        <i class="fas fa-external-link-alt"></i> Voir le projet
+                    </a>
                 `;
             } else if (contentId === 'project-bibliotheque') {
                 content = `
                     <h2>Bibliothèque en Ligne</h2>
-                    <p>Détails du projet : Création d'un site web fonctionnel pour une bibliothèque en ligne avec back-end en PHP.</p>
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Library project" class="modal-img">
+                    <p>Dans le cadre de ma soutenance, j'ai développé une bibliothèque en ligne fonctionnelle, offrant aux utilisateurs un accès facile à une collection de livres numériques. Le back-end en PHP gère efficacement les bases de données MySQL pour le stockage et la recherche, tandis que Bootstrap et JavaScript assurent une interface intuitive et responsive. Ce projet a démontré ma capacité à intégrer des technologies variées pour créer une solution pratique et user-friendly.</p>
+                    <a href="https://github.com/saraVX/bibliotheque-project" target="_blank" class="btn btn-green">
+                        <i class="fas fa-external-link-alt"></i> Voir le projet
+                    </a>
                 `;
             } else if (contentId === 'project-udemy') {
                 content = `
                     <h2>Formation Udemy</h2>
-                    <p>Détails de la formation : Acquisition de compétences en HTML, CSS, JavaScript avec réalisation de projets pratiques.</p>
+                    <img src="https://images.unsplash.com/photo-1503676268198-2bb5e1221be1?auto=format&fit=crop&w=800&q=80" alt="Udemy formation" class="modal-img">
+                    <p>Cette formation complète sur Udemy m'a permis d'acquérir des bases solides en développement web, couvrant HTML, CSS et JavaScript de manière approfondie. À travers des projets pratiques, j'ai appris à créer des sites web dynamiques et responsive, renforçant ainsi mes aptitudes techniques et ma compréhension des meilleures pratiques en codage. Cette expérience a été un tremplin essentiel pour mes projets ultérieurs.</p>
+                    <a href="https://www.udemy.com/certificate/example" target="_blank" class="btn btn-green">
+                        <i class="fas fa-external-link-alt"></i> Voir la certification
+                    </a>
                 `;
             }
             

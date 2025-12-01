@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -437,12 +437,6 @@
             background: var(--primary);
             color: white;
         }
-        .btn-green {
-            background: #28a745;
-        }
-        .btn-green:hover {
-            background: #218838;
-        }
         /* Scroll down indicator */
         .scroll-down {
             position: absolute;
@@ -623,37 +617,37 @@
             .welcome-section h1 {
                 font-size: 2.5rem;
             }
-           
+          
             .welcome-section p {
                 font-size: 1.1rem;
             }
-           
+          
             .timeline::after {
                 left: 31px;
             }
-           
+          
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-           
+          
             .timeline-item:nth-child(odd),
             .timeline-item:nth-child(even) {
                 left: 0;
                 text-align: left;
             }
-           
+          
             .timeline-item:nth-child(odd)::after,
             .timeline-item:nth-child(even)::after {
                 left: 23px;
             }
-           
+          
             .language-card {
                 width: 140px;
                 height: 140px;
             }
-           
+          
             .skills-grid {
                 grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             }
@@ -664,7 +658,7 @@
             transform: translateY(50px);
             transition: all 0.8s;
         }
-       
+      
         .section-visible {
             opacity: 1;
             transform: translateY(0);
@@ -728,6 +722,231 @@
             color: var(--primary);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(74, 74, 244, 0.2);
+        }
+        /* Certifications Section */
+        .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .certification-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+            max-width: 500px;
+            width: 100%;
+        }
+        .certification-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(74, 74, 244, 0.2);
+        }
+        .certification-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .certification-details {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .certification-detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .certification-detail-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .certification-detail-value {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        /* Veille Technologique - AI Section */
+        .ai-veille-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .ai-category {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+        .ai-category:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(74, 74, 244, 0.2);
+        }
+        .ai-category h3 {
+            color: var(--primary);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .ai-resources {
+            margin-top: 1rem;
+        }
+        .ai-resource-item {
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            transition: var(--transition);
+        }
+        .ai-resource-item:hover {
+            background: rgba(74, 74, 244, 0.1);
+            transform: translateX(5px);
+        }
+        .ai-resource-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .ai-resource-item a:hover {
+            color: var(--secondary);
+        }
+        .ai-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+        }
+        .ai-stat {
+            text-align: center;
+        }
+        .ai-stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .ai-stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        /* AI Timeline */
+        .ai-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        .ai-timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            top: 0;
+            bottom: 0;
+            left: 20px;
+        }
+        .ai-timeline-item {
+            position: relative;
+            margin-left: 50px;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+        .ai-timeline-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(74, 74, 244, 0.2);
+        }
+        .ai-timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            left: -36px;
+            top: 20px;
+            z-index: 1;
+        }
+        .ai-timeline-year {
+            position: absolute;
+            left: -90px;
+            top: 15px;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        /* AI Trends Grid */
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .trend-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+        .trend-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(74, 74, 244, 0.2);
+        }
+        .trend-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        /* Improved AI Carousel */
+        .ai-carousel {
+            margin-top: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .ai-carousel-slide {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(74, 74, 244, 0.1) 100%);
+        }
+        .ai-carousel-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .ai-carousel-content {
+                flex-direction: column;
+            }
+        }
+        /* Certification Image Container */
+        .certification-image-container {
+            position: relative;
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .certification-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -865,11 +1084,131 @@
     <section class="full-page-section" id="certifications">
         <div class="section section-hidden">
             <h2>Certifications <i class="fas fa-certificate"></i></h2>
-            <p>Formation en Développement Web sur Udemy, Mars 2024. J'ai acquis des compétences en HTML, CSS, JavaScript, et réalisé des projets pratiques pour appliquer les concepts appris.</p>
-            <div class="interactive-card" style="max-width: 500px; margin: 2rem auto;">
-                <h3><i class="fab fa-udemy"></i> Certification Udemy</h3>
-                <p>Développement Web Complet 2024</p>
-                <img src="cert front end.png" alt="Certification Udemy" style="width:100%; border-radius: 8px; margin-top: 1rem;">
+            <p>Certification obtenue en développement web front-end</p>
+            
+            <!-- Certification Front-End -->
+            <div class="certification-card" style="margin: 0 auto;">
+                <h3><i class="fas fa-laptop-code"></i> Certification Développeur Web Front-End</h3>
+                <p>Le Cours Complet (HTML, CSS, JavaScript)</p>
+                
+                <!-- Image de certification générée par IA -->
+                <div class="certification-image-container">
+                    <div style="
+                        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                        padding: 2rem;
+                        border-radius: 12px;
+                        text-align: center;
+                        color: white;
+                        font-family: 'Inter', sans-serif;
+                    ">
+                        <div style="
+                            border: 3px solid #4a4af4;
+                            border-radius: 12px;
+                            padding: 2rem;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                        ">
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="
+                                    font-size: 2.5rem;
+                                    font-weight: bold;
+                                    color: #4a4af4;
+                                    margin-bottom: 0.5rem;
+                                ">CERTIFICAT</div>
+                                <div style="
+                                    font-size: 1.2rem;
+                                    color: #64ffda;
+                                    margin-bottom: 0.5rem;
+                                ">de Réussite</div>
+                            </div>
+                            
+                            <div style="
+                                font-size: 1.8rem;
+                                font-weight: bold;
+                                margin: 1.5rem 0;
+                                color: #ffffff;
+                            ">Développeur Web Front-End</div>
+                            
+                            <div style="
+                                font-size: 1.2rem;
+                                margin: 1rem 0;
+                                color: #a0a0c0;
+                            ">Le Cours Complet (HTML, CSS, JS)</div>
+                            
+                            <div style="
+                                margin: 2rem 0;
+                                padding: 1.5rem;
+                                background: rgba(74, 74, 244, 0.1);
+                                border-radius: 8px;
+                                border-left: 4px solid #4a4af4;
+                            ">
+                                <div style="font-size: 1.4rem; font-weight: bold; margin-bottom: 0.5rem; color: #ffffff;">
+                                    Sarah Ramdani
+                                </div>
+                                <div style="color: #a0a0c0; margin-bottom: 0.5rem;">
+                                    A réussi avec succès le cours
+                                </div>
+                            </div>
+                            
+                            <div style="
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 2rem;
+                                padding-top: 1.5rem;
+                                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                            ">
+                                <div style="text-align: left;">
+                                    <div style="color: #64ffda; font-size: 0.9rem;">Date</div>
+                                    <div style="color: #ffffff; font-weight: bold;">27 Oct. 2025</div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div style="color: #64ffda; font-size: 0.9rem;">Durée</div>
+                                    <div style="color: #ffffff; font-weight: bold;">26 heures</div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="color: #64ffda; font-size: 0.9rem;">Formateur</div>
+                                    <div style="color: #ffffff; font-weight: bold;">Matthieu Passerel</div>
+                                </div>
+                            </div>
+                            
+                            <div style="
+                                margin-top: 2rem;
+                                padding: 1rem;
+                                background: rgba(255, 255, 255, 0.03);
+                                border-radius: 8px;
+                                font-family: 'Roboto Mono', monospace;
+                                font-size: 0.8rem;
+                                color: #a0a0c0;
+                                word-break: break-all;
+                            ">
+                                Certificat N°: UC-1569a291-2607-4d47-a46e-ab77fbbff2e0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certification-details">
+                    <div class="certification-detail">
+                        <span class="certification-detail-label">Plateforme:</span>
+                        <span class="certification-detail-value">Formation en ligne</span>
+                    </div>
+                    <div class="certification-detail">
+                        <span class="certification-detail-label">Date d'obtention:</span>
+                        <span class="certification-detail-value">27 Octobre 2025</span>
+                    </div>
+                    <div class="certification-detail">
+                        <span class="certification-detail-label">Durée totale:</span>
+                        <span class="certification-detail-value">26 heures</span>
+                    </div>
+                    <div class="certification-detail">
+                        <span class="certification-detail-label">Formateur:</span>
+                        <span class="certification-detail-value">Matthieu Passerel</span>
+                    </div>
+                    <div class="certification-detail">
+                        <span class="certification-detail-label">Compétences acquises:</span>
+                        <span class="certification-detail-value">HTML, CSS, JavaScript</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1050,48 +1389,207 @@
             </div>
         </div>
     </section>
-    <!-- Tech Watch Section -->
+    <!-- Enhanced Tech Watch Section - AI Focus -->
     <section class="full-page-section" id="veille-ai">
         <div class="section section-hidden">
             <h2>Veille Technologique <i class="fas fa-brain"></i></h2>
-            <p>L'Intelligence Artificielle et son impact</p>
-            <div class="carousel">
-                <div class="carousel-container" id="carouselContainer">
-                    <div class="carousel-slide">
-                        <img src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Histoire de l'IA">
-                        <h3>Histoire de l'IA</h3>
-                        <p>L'intelligence artificielle (IA) a émergé dans les années 1950 avec les travaux d'Alan Turing, qui proposa le célèbre "test de Turing" pour évaluer la capacité d'une machine à imiter l'intelligence humaine.</p>
+            <p>L'Intelligence Artificielle et son impact sur le développement logiciel</p>
+            
+            <!-- AI Statistics -->
+            <div class="ai-stats">
+                <div class="ai-stat">
+                    <div class="ai-stat-value">+40%</div>
+                    <div class="ai-stat-label">Croissance IA en 2024</div>
+                </div>
+                <div class="ai-stat">
+                    <div class="ai-stat-value">85%</div>
+                    <div class="ai-stat-label">Entreprises utilisant l'IA</div>
+                </div>
+                <div class="ai-stat">
+                    <div class="ai-stat-value">$500B</div>
+                    <div class="ai-stat-label">Marché IA d'ici 2025</div>
+                </div>
+            </div>
+
+            <!-- AI Categories Grid -->
+            <div class="ai-veille-container">
+                <!-- Category 1: AI Development -->
+                <div class="ai-category">
+                    <h3><i class="fas fa-code"></i> Développement IA</h3>
+                    <p>Outils et frameworks pour le développement d'applications IA</p>
+                    <div class="ai-resources">
+                        <div class="ai-resource-item">
+                            <a href="https://www.tensorflow.org/" target="_blank">
+                                <i class="fab fa-google"></i> TensorFlow - Framework d'apprentissage automatique
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://pytorch.org/" target="_blank">
+                                <i class="fab fa-facebook"></i> PyTorch - Framework pour le deep learning
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://scikit-learn.org/" target="_blank">
+                                <i class="fas fa-robot"></i> Scikit-learn - Machine learning en Python
+                            </a>
+                        </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="https://www.investopedia.com/thmb/4K3hIci9bUF3521OUjC-cCG3NpE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/terms_a_artificial-intelligence-ai_asp-FINAL-ddba8ac599f3438d8064350d2ee1ae5a.jpg" alt="Définition de l'IA">
-                        <h3>Définition de l'IA</h3>
-                        <p>L'intelligence artificielle (IA) désigne la capacité d'une machine ou d'un système informatique à accomplir des tâches qui nécessitent normalement l'intelligence humaine.</p>
+                </div>
+
+                <!-- Category 2: AI in Web Dev -->
+                <div class="ai-category">
+                    <h3><i class="fas fa-globe"></i> IA dans le Web</h3>
+                    <p>Applications de l'IA dans le développement web moderne</p>
+                    <div class="ai-resources">
+                        <div class="ai-resource-item">
+                            <a href="https://openai.com/blog/chatgpt" target="_blank">
+                                <i class="fas fa-comment-dots"></i> ChatGPT - Assistance au développement
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://github.com/features/copilot" target="_blank">
+                                <i class="fas fa-robot"></i> GitHub Copilot - Assistant de programmation
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://www.tensorflow.org/js" target="_blank">
+                                <i class="fab fa-js"></i> TensorFlow.js - IA dans le navigateur
+                            </a>
+                        </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exemples d'IA">
-                        <h3>Exemples concrets</h3>
-                        <p>L'algorithme de TikTok utilise l'IA pour recommander des vidéos basées sur les interactions de l'utilisateur. L'IA en médecine permet de diagnostiquer plus rapidement des maladies.</p>
+                </div>
+
+                <!-- Category 3: Trends & News -->
+                <div class="ai-category">
+                    <h3><i class="fas fa-newspaper"></i> Actualités & Tendances</h3>
+                    <p>Sources d'information sur les dernières avancées en IA</p>
+                    <div class="ai-resources">
+                        <div class="ai-resource-item">
+                            <a href="https://www.zdnet.fr/actualites/intelligence-artificielle/" target="_blank">
+                                <i class="fas fa-rss"></i> ZDNet - Actualités IA
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://venturebeat.com/category/ai/" target="_blank">
+                                <i class="fas fa-chart-line"></i> VentureBeat - Innovations IA
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://www.reddit.com/r/MachineLearning/" target="_blank">
+                                <i class="fab fa-reddit"></i> Reddit ML - Communauté IA
+                            </a>
+                        </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="https://www.researchgate.net/publication/361675958/figure/fig4/AS:1182008902451221@1658824291575/Advantages-of-artificial-intelligence.png" alt="Avantages de l'IA">
-                        <h3>Avantages de l'IA</h3>
-                        <p>Amélioration de l'efficacité, automatisation des tâches répétitives, aide à la décision grâce à l'analyse de données massives, innovation dans des secteurs comme la santé, les transports et la finance.</p>
+                </div>
+            </div>
+
+            <!-- AI Evolution Timeline -->
+            <h3 style="margin-top: 3rem;">Évolution de l'IA</h3>
+            <div class="ai-timeline">
+                <div class="ai-timeline-item">
+                    <span class="ai-timeline-year">1950</span>
+                    <h4>Test de Turing</h4>
+                    <p>Alan Turing propose un test pour évaluer l'intelligence des machines.</p>
+                </div>
+                <div class="ai-timeline-item">
+                    <span class="ai-timeline-year">1997</span>
+                    <h4>Deep Blue vs Kasparov</h4>
+                    <p>Premier ordinateur à battre un champion du monde d'échecs.</p>
+                </div>
+                <div class="ai-timeline-item">
+                    <span class="ai-timeline-year">2012</span>
+                    <h4>Réseaux neuronaux profonds</h4>
+                    <p>AlexNet révolutionne la vision par ordinateur avec le deep learning.</p>
+                </div>
+                <div class="ai-timeline-item">
+                    <span class="ai-timeline-year">2020</span>
+                    <h4>GPT-3</h4>
+                    <p>Modèle de langage avec 175 milliards de paramètres.</p>
+                </div>
+                <div class="ai-timeline-item">
+                    <span class="ai-timeline-year">2024</span>
+                    <h4>Multimodalité</h4>
+                    <p>IA capable de comprendre et générer texte, image, audio simultanément.</p>
+                </div>
+            </div>
+
+            <!-- AI Trends Grid -->
+            <h3 style="margin-top: 3rem;">Tendances actuelles en IA</h3>
+            <div class="trends-grid">
+                <div class="trend-card">
+                    <i class="fas fa-robot trend-icon"></i>
+                    <h4>IA Générative</h4>
+                    <p>Création de contenu texte, image, code</p>
+                </div>
+                <div class="trend-card">
+                    <i class="fas fa-shield-alt trend-icon"></i>
+                    <h4>IA Éthique</h4>
+                    <p>Développement responsable de l'IA</p>
+                </div>
+                <div class="trend-card">
+                    <i class="fas fa-mobile-alt trend-icon"></i>
+                    <h4>Edge AI</h4>
+                    <p>IA déployée sur dispositifs locaux</p>
+                </div>
+                <div class="trend-card">
+                    <i class="fas fa-user-md trend-icon"></i>
+                    <h4>IA dans la Santé</h4>
+                    <p>Diagnostic assisté par IA</p>
+                </div>
+            </div>
+
+            <!-- Improved AI Carousel -->
+            <div class="carousel ai-carousel">
+                <div class="carousel-container" id="aiCarouselContainer">
+                    <div class="carousel-slide ai-carousel-slide">
+                        <div class="ai-carousel-content">
+                            <div>
+                                <h3>IA et Développement Logiciel</h3>
+                                <p>L'intelligence artificielle révolutionne la façon dont nous développons des logiciels, avec des outils comme GitHub Copilot qui assistent les développeurs en temps réel, améliorant la productivité de 55% selon les études récentes.</p>
+                                <a href="https://github.blog/2023-06-27-how-github-copilot-is-changing-the-way-we-write-code/" target="_blank" class="btn" style="margin-top: 1rem;">
+                                    <i class="fas fa-external-link-alt"></i> En savoir plus
+                                </a>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Development" style="width: 300px; border-radius: 8px;">
+                        </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="https://deerdesigner.com/wp-content/uploads/mktng205-robot-AI-designer-confused-breaking-down-negative.png" alt="Inconvénients de l'IA">
-                        <h3>Inconvénients de l'IA</h3>
-                        <p>Perte potentielle d'emplois due à l'automatisation, biais algorithmiques menant à des discriminations, problèmes éthiques comme la vie privée, et dépendance technologique excessive.</p>
+                    <div class="carousel-slide ai-carousel-slide">
+                        <div class="ai-carousel-content">
+                            <div>
+                                <h3>Apprentissage Automatique</h3>
+                                <p>Le machine learning permet aux systèmes d'apprendre et de s'améliorer sans programmation explicite. Les frameworks comme TensorFlow et PyTorch rendent ces technologies accessibles aux développeurs.</p>
+                                <a href="https://www.tensorflow.org/learn" target="_blank" class="btn" style="margin-top: 1rem;">
+                                    <i class="fas fa-external-link-alt"></i> Explorer TensorFlow
+                                </a>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machine Learning" style="width: 300px; border-radius: 8px;">
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-arrows">
-                    <div class="carousel-arrow left" onclick="moveCarousel(-1)">
+                    <div class="carousel-arrow left" onclick="moveAICarousel(-1)">
                         <i class="fas fa-chevron-left"></i>
                     </div>
-                    <div class="carousel-arrow right" onclick="moveCarousel(1)">
+                    <div class="carousel-arrow right" onclick="moveAICarousel(1)">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
-                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+
+            <!-- Resource Links -->
+            <div class="interactive-card" style="margin-top: 2rem;">
+                <h3><i class="fas fa-link"></i> Mes Sources de Veille</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+                    <a href="https://www.journaldugeek.com/dossier/intelligence-artificielle/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-newspaper"></i> Journal du Geek
+                    </a>
+                    <a href="https://www.lemondeinformatique.fr/intelligence-artificielle-22.html" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-laptop-code"></i> Le Monde Informatique
+                    </a>
+                    <a href="https://www.technologyreview.com/category/artificial-intelligence/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-globe"></i> MIT Tech Review
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1117,9 +1615,9 @@
                     </span>
                 </li>
                 <li>
-                    <span>
+                    <a href="https://github.com" target="_blank">
                         <i class="fab fa-github"></i> GitHub
-                    </span>
+                    </a>
                 </li>
             </ul>
             <div class="interactive-card" style="max-width: 500px; margin: 2rem auto;">
@@ -1236,6 +1734,7 @@
             const texts = [
                 "Développeuse Web",
                 "Alternance: 2 jours à l'école et 3 jours en entreprise",
+                "Spécialisée en Intelligence Artificielle"
             ];
             let textIndex = 0;
             let charIndex = 0;
@@ -1243,7 +1742,7 @@
             let typingSpeed = 100;
             function type() {
                 const currentText = texts[textIndex];
-               
+              
                 if (isDeleting) {
                     typedTextElement.textContent = currentText.substring(0, charIndex - 1);
                     charIndex--;
@@ -1266,42 +1765,30 @@
             // Start the typing effect
             type();
         });
-        // Carousel functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-        const carouselContainer = document.getElementById('carouselContainer');
-        const carouselDots = document.getElementById('carouselDots');
-        // Create dots
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('carousel-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                currentSlide = i;
-                updateCarousel();
-            });
-            carouselDots.appendChild(dot);
+        // Carousel functionality for AI section
+        let currentAISlide = 0;
+        const aiSlides = document.querySelectorAll('#aiCarouselContainer .carousel-slide');
+        const totalAISlides = aiSlides.length;
+        const aiCarouselContainer = document.getElementById('aiCarouselContainer');
+        
+        function moveAICarousel(direction) {
+            currentAISlide = (currentAISlide + direction + totalAISlides) % totalAISlides;
+            updateAICarousel();
         }
-        function moveCarousel(direction) {
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            updateCarousel();
+        
+        function updateAICarousel() {
+            aiCarouselContainer.style.transform = `translateX(-${currentAISlide * 100}%)`;
         }
-        function updateCarousel() {
-            carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-        // Auto-slide
+        
+        // Auto-slide for AI carousel
         setInterval(() => {
-            moveCarousel(1);
-        }, 5000);
+            moveAICarousel(1);
+        }, 6000);
         // Modal functionality
         function showModal(contentId) {
             const modal = document.getElementById('modal');
             const modalContent = document.getElementById('modal-content');
-           
+          
             let content = '';
             if (contentId === 'project-fleet') {
                 content = `
@@ -1324,9 +1811,9 @@
                     <p>Dans le cadre de ma soutenance, j'ai développé une bibliothèque en ligne fonctionnelle, offrant aux utilisateurs un accès facile à une collection de livres numériques. Le back-end en PHP gère efficacement les bases de données MySQL pour le stockage et la recherche, tandis que Bootstrap et JavaScript assurent une interface intuitive et responsive. Ce projet a démontré ma capacité à intégrer des technologies variées pour créer une solution pratique et user-friendly.</p>
                 `;
             }
-           
+          
             modalContent.innerHTML = content;
-           
+          
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -1363,6 +1850,16 @@
             e.preventDefault();
             alert('Merci pour votre message! Dans une implémentation réelle, ce formulaire enverrait un email.');
             this.reset();
+        });
+        // AI resources interaction
+        document.querySelectorAll('.ai-resource-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                const link = this.querySelector('a');
+                if (link) {
+                    window.open(link.href, '_blank');
+                }
+            });
         });
     </script>
 </body>

@@ -1,9 +1,9 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Sarah Ramdani</title>
+    <title>Portfolio - Sarah Ramdani (IA & Robotique)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
@@ -89,7 +89,7 @@
             font-size: 2.5rem;
             color: var(--primary);
         }
-        /* Interactive elements */
+        /* Interactive card */
         .interactive-card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -769,7 +769,7 @@
             color: var(--text-color);
             font-weight: 500;
         }
-        /* Veille Technologique - AI Section */
+        /* Enhanced Veille Technologique - IA & Robotique */
         .ai-veille-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -888,7 +888,7 @@
             color: var(--secondary);
             font-weight: 500;
         }
-        /* AI Trends Grid */
+        /* Trends Grid */
         .trends-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -913,7 +913,7 @@
             color: var(--primary);
             margin-bottom: 1rem;
         }
-        /* Improved AI Carousel */
+        /* AI Carousel */
         .ai-carousel {
             margin-top: 2rem;
             border-radius: 12px;
@@ -947,6 +947,174 @@
             width: 100%;
             height: auto;
             display: block;
+        }
+        /* ===== STYLES POUR SARABOT (CHATBOT) ===== */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .chatbot-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 74, 244, 0.4);
+            transition: var(--transition);
+        }
+        .chatbot-icon:hover {
+            transform: scale(1.1);
+            background: var(--primary-hover);
+        }
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .chatbot-window.open {
+            display: flex;
+        }
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--surface) 100%);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .chatbot-header-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        .chatbot-header-title i {
+            font-size: 1.2rem;
+        }
+        .chatbot-close {
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        .chatbot-close:hover {
+            color: var(--secondary);
+        }
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .message {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 80%;
+        }
+        .message.bot {
+            align-self: flex-start;
+        }
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+        .message-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        .message.user .message-avatar {
+            background: var(--secondary);
+            color: var(--background);
+        }
+        .message-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+        .message.bot .message-content {
+            border-top-left-radius: 4px;
+            background: rgba(74, 74, 244, 0.2);
+        }
+        .message.user .message-content {
+            border-top-right-radius: 4px;
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--secondary);
+        }
+        .chatbot-input {
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            gap: 0.5rem;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.7rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            outline: none;
+        }
+        .chatbot-input input:focus {
+            border-color: var(--primary);
+        }
+        .chatbot-input button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .chatbot-input button:hover {
+            background: var(--primary-hover);
+            transform: scale(1.05);
+        }
+        /* Styles pour les liens dans le chatbot */
+        .message-content a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        .message-content a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive pour chatbot */
+        @media (max-width: 480px) {
+            .chatbot-window {
+                width: 300px;
+                right: 0;
+            }
         }
     </style>
 </head>
@@ -1001,7 +1169,7 @@
             <i class="fas fa-globe"></i> Langues
         </a>
         <a href="#veille-ai" onclick="toggleMenu()">
-            <i class="fas fa-brain"></i> Veille Technologique
+            <i class="fas fa-brain"></i> Veille : IA & Robotique
         </a>
         <a href="#contact" onclick="toggleMenu()">
             <i class="fas fa-envelope"></i> Contact
@@ -1011,7 +1179,7 @@
     <section class="full-page-section" id="about">
         <div class="section section-hidden">
             <h1>À Propos <i class="fas fa-rocket"></i></h1>
-            <p>Étudiante en informatique, motivée et passionnée par les nouvelles technologies, je suis actuellement à la recherche d'une alternance et disponible immédiatement.</p>
+            <p>Étudiante en informatique, motivée et passionnée par les nouvelles technologies, notamment l'IA et la robotique, je suis actuellement à la recherche d'une alternance et disponible immédiatement.</p>
         </div>
     </section>
     <!-- Formation Section -->
@@ -1389,180 +1557,207 @@
             </div>
         </div>
     </section>
-    <!-- Enhanced Tech Watch Section - AI Focus -->
+    <!-- Enhanced Tech Watch Section - IA & Robotique (Mise à jour complète) -->
     <section class="full-page-section" id="veille-ai">
         <div class="section section-hidden">
             <h2>Veille Technologique <i class="fas fa-brain"></i></h2>
-            <p>L'Intelligence Artificielle et son impact sur le développement logiciel</p>
+            <p>L'Intelligence Artificielle dans la Robotique : innovations, applications et ressources</p>
             
-            <!-- AI Statistics -->
+            <!-- AI Statistics spécifiques à la robotique -->
             <div class="ai-stats">
                 <div class="ai-stat">
-                    <div class="ai-stat-value">+40%</div>
-                    <div class="ai-stat-label">Croissance IA en 2024</div>
+                    <div class="ai-stat-value">+45%</div>
+                    <div class="ai-stat-label">Croissance robots IA (2025)</div>
                 </div>
                 <div class="ai-stat">
-                    <div class="ai-stat-value">85%</div>
-                    <div class="ai-stat-label">Entreprises utilisant l'IA</div>
+                    <div class="ai-stat-value">3.5M</div>
+                    <div class="ai-stat-label">Robots industriels en 2025</div>
                 </div>
                 <div class="ai-stat">
-                    <div class="ai-stat-value">$500B</div>
-                    <div class="ai-stat-label">Marché IA d'ici 2025</div>
+                    <div class="ai-stat-value">$210B</div>
+                    <div class="ai-stat-label">Marché robotique IA (2026)</div>
                 </div>
             </div>
 
-            <!-- AI Categories Grid -->
+            <!-- Catégories : IA & Robotique -->
             <div class="ai-veille-container">
-                <!-- Category 1: AI Development -->
+                <!-- Catégorie 1: Robotique Intelligente -->
                 <div class="ai-category">
-                    <h3><i class="fas fa-code"></i> Développement IA</h3>
-                    <p>Outils et frameworks pour le développement d'applications IA</p>
+                    <h3><i class="fas fa-robot"></i> Robotique Intelligente</h3>
+                    <p>Frameworks et plateformes pour robots autonomes</p>
                     <div class="ai-resources">
                         <div class="ai-resource-item">
-                            <a href="https://www.tensorflow.org/" target="_blank">
-                                <i class="fab fa-google"></i> TensorFlow - Framework d'apprentissage automatique
+                            <a href="https://www.ros.org/" target="_blank">
+                                <i class="fas fa-cogs"></i> ROS (Robot Operating System) - Standard de facto
                             </a>
                         </div>
                         <div class="ai-resource-item">
-                            <a href="https://pytorch.org/" target="_blank">
-                                <i class="fab fa-facebook"></i> PyTorch - Framework pour le deep learning
+                            <a href="https://www.openrobots.org/" target="_blank">
+                                <i class="fas fa-code-branch"></i> OpenRobots - Logiciels open source
                             </a>
                         </div>
                         <div class="ai-resource-item">
-                            <a href="https://scikit-learn.org/" target="_blank">
-                                <i class="fas fa-robot"></i> Scikit-learn - Machine learning en Python
+                            <a href="https://gazebosim.org/home" target="_blank">
+                                <i class="fas fa-sim-card"></i> Gazebo - Simulation robotique 3D
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://www.viam.com/" target="_blank">
+                                <i class="fas fa-cloud"></i> Viam - Plateforme pour robots intelligents
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category 2: AI in Web Dev -->
+                <!-- Catégorie 2: IA Embarquée & Robotique -->
                 <div class="ai-category">
-                    <h3><i class="fas fa-globe"></i> IA dans le Web</h3>
-                    <p>Applications de l'IA dans le développement web moderne</p>
+                    <h3><i class="fas fa-microchip"></i> IA Embarquée pour Robots</h3>
+                    <p>Matériel et frameworks pour l'IA sur robots</p>
                     <div class="ai-resources">
                         <div class="ai-resource-item">
-                            <a href="https://openai.com/blog/chatgpt" target="_blank">
-                                <i class="fas fa-comment-dots"></i> ChatGPT - Assistance au développement
+                            <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/" target="_blank">
+                                <i class="fas fa-microchip"></i> NVIDIA Jetson - IA embarquée
                             </a>
                         </div>
                         <div class="ai-resource-item">
-                            <a href="https://github.com/features/copilot" target="_blank">
-                                <i class="fas fa-robot"></i> GitHub Copilot - Assistant de programmation
+                            <a href="https://www.raspberrypi.com/" target="_blank">
+                                <i class="fas fa-microchip"></i> Raspberry Pi - Robots éducatifs
                             </a>
                         </div>
                         <div class="ai-resource-item">
-                            <a href="https://www.tensorflow.org/js" target="_blank">
-                                <i class="fab fa-js"></i> TensorFlow.js - IA dans le navigateur
+                            <a href="https://www.arduino.cc/" target="_blank">
+                                <i class="fas fa-microchip"></i> Arduino - Contrôleurs pour robots
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://www.intel.com/content/www/us/en/products/docs/processors/movidius-vpu.html" target="_blank">
+                                <i class="fas fa-eye"></i> Intel Movidius - Vision par ordinateur
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category 3: Trends & News -->
+                <!-- Catégorie 3: Actualités & Tendances Robotique IA -->
                 <div class="ai-category">
-                    <h3><i class="fas fa-newspaper"></i> Actualités & Tendances</h3>
-                    <p>Sources d'information sur les dernières avancées en IA</p>
+                    <h3><i class="fas fa-newspaper"></i> Actualités Robotique & IA</h3>
+                    <p>Sources spécialisées</p>
                     <div class="ai-resources">
                         <div class="ai-resource-item">
-                            <a href="https://www.zdnet.fr/actualites/intelligence-artificielle/" target="_blank">
-                                <i class="fas fa-rss"></i> ZDNet - Actualités IA
+                            <a href="https://www.therobotreport.com/" target="_blank">
+                                <i class="fas fa-robot"></i> The Robot Report - Actualités robotique
                             </a>
                         </div>
                         <div class="ai-resource-item">
-                            <a href="https://venturebeat.com/category/ai/" target="_blank">
-                                <i class="fas fa-chart-line"></i> VentureBeat - Innovations IA
+                            <a href="https://spectrum.ieee.org/robotics" target="_blank">
+                                <i class="fas fa-flask"></i> IEEE Spectrum Robotics
                             </a>
                         </div>
                         <div class="ai-resource-item">
-                            <a href="https://www.reddit.com/r/MachineLearning/" target="_blank">
-                                <i class="fab fa-reddit"></i> Reddit ML - Communauté IA
+                            <a href="https://robohub.org/" target="_blank">
+                                <i class="fas fa-globe"></i> Robohub - Recherche et innovation
+                            </a>
+                        </div>
+                        <div class="ai-resource-item">
+                            <a href="https://www.reddit.com/r/robotics/" target="_blank">
+                                <i class="fab fa-reddit"></i> Reddit Robotics - Communauté
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- AI Evolution Timeline -->
-            <h3 style="margin-top: 3rem;">Évolution de l'IA</h3>
+            <!-- Timeline spécifique à la robotique IA -->
+            <h3 style="margin-top: 3rem;">Évolution de l'IA en Robotique</h3>
             <div class="ai-timeline">
                 <div class="ai-timeline-item">
-                    <span class="ai-timeline-year">1950</span>
-                    <h4>Test de Turing</h4>
-                    <p>Alan Turing propose un test pour évaluer l'intelligence des machines.</p>
+                    <span class="ai-timeline-year">1961</span>
+                    <h4>Premier robot industriel</h4>
+                    <p>Unimate installé chez General Motors.</p>
                 </div>
                 <div class="ai-timeline-item">
-                    <span class="ai-timeline-year">1997</span>
-                    <h4>Deep Blue vs Kasparov</h4>
-                    <p>Premier ordinateur à battre un champion du monde d'échecs.</p>
+                    <span class="ai-timeline-year">1999</span>
+                    <h4>Robotique grand public</h4>
+                    <p>Sony Aibo, premier robot de compagnie.</p>
                 </div>
                 <div class="ai-timeline-item">
-                    <span class="ai-timeline-year">2012</span>
-                    <h4>Réseaux neuronaux profonds</h4>
-                    <p>AlexNet révolutionne la vision par ordinateur avec le deep learning.</p>
+                    <span class="ai-timeline-year">2013</span>
+                    <h4>Atlas (Boston Dynamics)</h4>
+                    <p>Robot humanoïde à la pointe.</p>
                 </div>
                 <div class="ai-timeline-item">
                     <span class="ai-timeline-year">2020</span>
-                    <h4>GPT-3</h4>
-                    <p>Modèle de langage avec 175 milliards de paramètres.</p>
+                    <h4>Robotique autonome</h4>
+                    <p>Robots livreurs, drones IA.</p>
                 </div>
                 <div class="ai-timeline-item">
                     <span class="ai-timeline-year">2024</span>
-                    <h4>Multimodalité</h4>
-                    <p>IA capable de comprendre et générer texte, image, audio simultanément.</p>
+                    <h4>Apprentissage par renforcement</h4>
+                    <p>Robots apprenant des tâches complexes.</p>
                 </div>
             </div>
 
-            <!-- AI Trends Grid -->
-            <h3 style="margin-top: 3rem;">Tendances actuelles en IA</h3>
+            <!-- Tendances actuelles (Robotique) -->
+            <h3 style="margin-top: 3rem;">Tendances en Robotique & IA</h3>
             <div class="trends-grid">
                 <div class="trend-card">
-                    <i class="fas fa-robot trend-icon"></i>
-                    <h4>IA Générative</h4>
-                    <p>Création de contenu texte, image, code</p>
+                    <i class="fas fa-hand-rock trend-icon"></i>
+                    <h4>Préhension intelligente</h4>
+                    <p>Manipulation fine par IA</p>
                 </div>
                 <div class="trend-card">
-                    <i class="fas fa-shield-alt trend-icon"></i>
-                    <h4>IA Éthique</h4>
-                    <p>Développement responsable de l'IA</p>
+                    <i class="fas fa-eye trend-icon"></i>
+                    <h4>Vision par ordinateur</h4>
+                    <p>Détection et navigation</p>
                 </div>
                 <div class="trend-card">
-                    <i class="fas fa-mobile-alt trend-icon"></i>
-                    <h4>Edge AI</h4>
-                    <p>IA déployée sur dispositifs locaux</p>
+                    <i class="fas fa-people-arrows trend-icon"></i>
+                    <h4>Collaboration Homme-Robot</h4>
+                    <p>Cobots sécurisés</p>
                 </div>
                 <div class="trend-card">
-                    <i class="fas fa-user-md trend-icon"></i>
-                    <h4>IA dans la Santé</h4>
-                    <p>Diagnostic assisté par IA</p>
+                    <i class="fas fa-seedling trend-icon"></i>
+                    <h4>Robotique agricole</h4>
+                    <p>IA pour l'agriculture de précision</p>
                 </div>
             </div>
 
-            <!-- Improved AI Carousel -->
+            <!-- Carousel spécifique à la robotique -->
             <div class="carousel ai-carousel">
                 <div class="carousel-container" id="aiCarouselContainer">
                     <div class="carousel-slide ai-carousel-slide">
                         <div class="ai-carousel-content">
                             <div>
-                                <h3>IA et Développement Logiciel</h3>
-                                <p>L'intelligence artificielle révolutionne la façon dont nous développons des logiciels, avec des outils comme GitHub Copilot qui assistent les développeurs en temps réel, améliorant la productivité de 55% selon les études récentes.</p>
-                                <a href="https://github.blog/2023-06-27-how-github-copilot-is-changing-the-way-we-write-code/" target="_blank" class="btn" style="margin-top: 1rem;">
-                                    <i class="fas fa-external-link-alt"></i> En savoir plus
+                                <h3>Robotique Humanoïde</h3>
+                                <p>Des robots comme Atlas ou Optimus repoussent les limites de la mobilité et de l'interaction grâce à l'IA. Les réseaux neuronaux profonds permettent une locomotion fluide et une adaptation à l'environnement.</p>
+                                <a href="https://www.bostondynamics.com/atlas" target="_blank" class="btn" style="margin-top: 1rem;">
+                                    <i class="fas fa-external-link-alt"></i> Découvrir Atlas
                                 </a>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Development" style="width: 300px; border-radius: 8px;">
+                            <img src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Robotique Humanoïde" style="width: 300px; border-radius: 8px;">
                         </div>
                     </div>
                     <div class="carousel-slide ai-carousel-slide">
                         <div class="ai-carousel-content">
                             <div>
-                                <h3>Apprentissage Automatique</h3>
-                                <p>Le machine learning permet aux systèmes d'apprendre et de s'améliorer sans programmation explicite. Les frameworks comme TensorFlow et PyTorch rendent ces technologies accessibles aux développeurs.</p>
-                                <a href="https://www.tensorflow.org/learn" target="_blank" class="btn" style="margin-top: 1rem;">
-                                    <i class="fas fa-external-link-alt"></i> Explorer TensorFlow
+                                <h3>Swarm Robotics</h3>
+                                <p>Inspirée des insectes sociaux, la robotique en essaim utilise des algorithmes d'IA pour coordonner des groupes de robots, avec des applications en recherche, sauvetage, et agriculture.</p>
+                                <a href="https://www.sciencedirect.com/topics/engineering/swarm-robotics" target="_blank" class="btn" style="margin-top: 1rem;">
+                                    <i class="fas fa-external-link-alt"></i> En savoir plus
                                 </a>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machine Learning" style="width: 300px; border-radius: 8px;">
+                            <img src="https://images.unsplash.com/photo-1569078445560-c8b88b80e967?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Swarm Robotics" style="width: 300px; border-radius: 8px;">
+                        </div>
+                    </div>
+                    <div class="carousel-slide ai-carousel-slide">
+                        <div class="ai-carousel-content">
+                            <div>
+                                <h3>Robotique Médicale</h3>
+                                <p>L'IA aide à planifier et réaliser des opérations chirurgicales avec une précision inégalée (Da Vinci), et à développer des prothèses intelligentes.</p>
+                                <a href="https://www.intuitive.com/en-us/products-and-services/da-vinci" target="_blank" class="btn" style="margin-top: 1rem;">
+                                    <i class="fas fa-external-link-alt"></i> Da Vinci Surgery
+                                </a>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1581595219315-a187a40b7e8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Robotique médicale" style="width: 300px; border-radius: 8px;">
                         </div>
                     </div>
                 </div>
@@ -1576,18 +1771,21 @@
                 </div>
             </div>
 
-            <!-- Resource Links -->
+            <!-- Carte interactive avec liens supplémentaires -->
             <div class="interactive-card" style="margin-top: 2rem;">
-                <h3><i class="fas fa-link"></i> Mes Sources de Veille</h3>
+                <h3><i class="fas fa-link"></i> Mes Sources de Veille (Robotique & IA)</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                    <a href="https://www.journaldugeek.com/dossier/intelligence-artificielle/" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-newspaper"></i> Journal du Geek
+                    <a href="https://www.futura-sciences.com/tech/robotique/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-newspaper"></i> Futura Sciences (Robotique)
                     </a>
-                    <a href="https://www.lemondeinformatique.fr/intelligence-artificielle-22.html" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-laptop-code"></i> Le Monde Informatique
+                    <a href="https://www.lesechos.fr/tech-medias/intelligence-artificielle" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-chart-line"></i> Les Echos - IA
                     </a>
-                    <a href="https://www.technologyreview.com/category/artificial-intelligence/" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-globe"></i> MIT Tech Review
+                    <a href="https://www.usinenouvelle.com/industrie/robotique" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-industry"></i> L'Usine Nouvelle
+                    </a>
+                    <a href="https://www.roboticsbusinessreview.com/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-briefcase"></i> Robotics Business Review
                     </a>
                 </div>
             </div>
@@ -1646,6 +1844,39 @@
             <div id="modal-content"></div>
         </div>
     </div>
+
+    <!-- ===== SARABOT CHATBOT ===== -->
+    <div class="chatbot-container">
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <i class="fas fa-brain"></i>
+                    <span>SaraBot - IA & Robotique</span>
+                </div>
+                <div class="chatbot-close" onclick="toggleChatbot()">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        Bonjour ! Je suis SaraBot, votre assistant spécialisé en Intelligence Artificielle et Robotique. Posez-moi toutes vos questions !
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotUserInput" placeholder="Posez votre question..." onkeypress="if(event.key==='Enter') sendChatbotMessage()">
+                <button onclick="sendChatbotMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -1734,7 +1965,7 @@
             const texts = [
                 "Développeuse Web",
                 "Alternance: 2 jours à l'école et 3 jours en entreprise",
-                "Spécialisée en Intelligence Artificielle"
+                "Passionnée d'IA et de Robotique"
             ];
             let textIndex = 0;
             let charIndex = 0;
@@ -1851,7 +2082,7 @@
             alert('Merci pour votre message! Dans une implémentation réelle, ce formulaire enverrait un email.');
             this.reset();
         });
-        // AI resources interaction
+        // AI resources interaction (clique sur un élément pour ouvrir le lien)
         document.querySelectorAll('.ai-resource-item').forEach(item => {
             item.addEventListener('click', function(e) {
                 if (e.target.tagName === 'A') return;
@@ -1861,6 +2092,93 @@
                 }
             });
         });
+
+        // ===== SARABOT CHATBOT LOGIC =====
+        function toggleChatbot() {
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            chatbotWindow.classList.toggle('open');
+        }
+
+        function sendChatbotMessage() {
+            const input = document.getElementById('chatbotUserInput');
+            const message = input.value.trim();
+            if (message === '') return;
+
+            // Afficher le message de l'utilisateur
+            addMessage(message, 'user');
+            input.value = '';
+
+            // Simuler une réponse du bot après un court délai
+            setTimeout(() => {
+                const botResponse = getBotResponse(message);
+                addMessage(botResponse, 'bot');
+            }, 500);
+        }
+
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatbotMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender);
+
+            const avatarDiv = document.createElement('div');
+            avatarDiv.classList.add('message-avatar');
+            avatarDiv.innerHTML = sender === 'bot' ? '<i class="fas fa-robot"></i>' : '<i class="fas fa-user"></i>';
+
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('message-content');
+            // Permettre le HTML simple pour les liens
+            contentDiv.innerHTML = text;
+
+            messageDiv.appendChild(avatarDiv);
+            messageDiv.appendChild(contentDiv);
+            messagesContainer.appendChild(messageDiv);
+
+            // Scroll automatique vers le bas
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function getBotResponse(userMessage) {
+            const msg = userMessage.toLowerCase();
+
+            // Base de connaissances simple sur l'IA et la robotique
+            if (msg.includes('ros') || msg.includes('robot operating system')) {
+                return `ROS est un framework flexible pour l'écriture de logiciels pour robots. C'est un ensemble d'outils, de bibliothèques et de conventions qui simplifient la création de comportements robotiques complexes. <a href='https://www.ros.org/' target='_blank'>En savoir plus</a>.`;
+            }
+            else if (msg.includes('gazebo')) {
+                return `Gazebo est un simulateur robotique 3D puissant. Il intègre un moteur physique, des capteurs réalistes et des environnements variés. Essentiel pour tester des algorithmes sans robot physique. <a href='https://gazebosim.org/home' target='_blank'>Site officiel</a>.`;
+            }
+            else if (msg.includes('jetson') || msg.includes('nvidia')) {
+                return `NVIDIA Jetson est une plateforme embarquée pour l'IA à la périphérie. Idéal pour les robots autonomes, drones, etc. Il supporte des réseaux neuronaux complets. <a href='https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/' target='_blank'>Découvrir Jetson</a>.`;
+            }
+            else if (msg.includes('raspberry') || msg.includes('pi')) {
+                return `Le Raspberry Pi est un nano-ordinateur très utilisé en robotique éducative et pour des projets de prototypage. On peut y exécuter du code Python, des bibliothèques d'IA légères. <a href='https://www.raspberrypi.com/' target='_blank'>Site officiel</a>.`;
+            }
+            else if (msg.includes('arduino')) {
+                return `Arduino est une plateforme de prototypage électronique open-source. Ses cartes (Uno, Mega, etc.) sont parfaites pour contrôler des moteurs, lire des capteurs. <a href='https://www.arduino.cc/' target='_blank'>Site officiel</a>.`;
+            }
+            else if (msg.includes('robotique médicale') || msg.includes('da vinci')) {
+                return `La robotique médicale, comme le système Da Vinci, permet une chirurgie moins invasive avec une précision accrue. L'IA est utilisée pour la planification et l'assistance. <a href='https://www.intuitive.com/en-us/products-and-services/da-vinci' target='_blank'>En savoir plus</a>.`;
+            }
+            else if (msg.includes('boston dynamics') || msg.includes('atlas')) {
+                return `Boston Dynamics est célèbre pour ses robots avancés comme Atlas (humanoïde), Spot (robot quadrupède). Ils utilisent des algorithmes de contrôle et d'IA pour la locomotion et la manipulation. <a href='https://www.bostondynamics.com/' target='_blank'>Site officiel</a>.`;
+            }
+            else if (msg.includes('swarm robotics') || msg.includes('essaim')) {
+                return `La robotique en essaim (swarm robotics) étudie comment un groupe de robots simples peut accomplir des tâches complexes via des règles locales. Inspiré des fourmis ou des abeilles. <a href='https://www.sciencedirect.com/topics/engineering/swarm-robotics' target='_blank'>Voir article</a>.`;
+            }
+            else if (msg.includes('cobot') || msg.includes('collaboratif')) {
+                return `Les cobots sont des robots conçus pour travailler en collaboration avec les humains, en partageant le même espace. Ils intègrent des capteurs et de l'IA pour la sécurité. <a href='https://www.ifr.org/service-robots' target='_blank'>Plus d'infos</a>.`;
+            }
+            else if (msg.includes('hello') || msg.includes('bonjour')) {
+                return `Bonjour ! Je suis SaraBot, votre assistant virtuel spécialisé en IA et robotique. Posez-moi des questions sur ROS, Gazebo, Jetson, Arduino, les tendances robotiques, etc.`;
+            }
+            else if (msg.includes('merci')) {
+                return `Je vous en prie ! N'hésitez pas si vous avez d'autres questions.`;
+            }
+            else {
+                return `Je n'ai pas encore appris à répondre à cette question précise, mais je peux vous suggérer de consulter mes <a href='#veille-ai'>sources de veille</a> dans la section dédiée ! Posez-moi des questions sur des sujets comme ROS, Gazebo, Jetson, ou les actualités robotiques.`;
+            }
+        }
+
     </script>
 </body>
 </html>
